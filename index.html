@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookmark Manager</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Main container for the application -->
+    <div class="container">
+      <!-- Main heading of the page -->
+      <h1>Bookmark Manager</h1>
+
+      <!-- Section containing the form to add new bookmarks -->
+      <div class="add-bookmark-form">
+        <h2>Add New Bookmark</h2>
+        <!-- Form for submitting new bookmark details -->
+        <form id="bookmarkForm">
+          <!-- Form group for website title input -->
+          <div class="form-group">
+            <label for="websiteTitle">Website Title:</label>
+            <input type="text" id="websiteTitle" required />
+          </div>
+          <!-- Form group for website URL input -->
+          <div class="form-group">
+            <label for="websiteUrl">Website URL:</label>
+            <input
+              type="url"
+              id="websiteUrl"
+              required
+              placeholder="https://example.com"
+            />
+          </div>
+          <!-- Form group for category selection -->
+          <div class="form-group">
+            <label for="category">Category:</label>
+            <select id="category">
+              <option value="Work">Work</option>
+              <option value="Study">Study</option>
+              <option value="Entertainment">Entertainment</option>
+              <option value="learning/courses">learning/courses</option>
+            </select>
+          </div>
+          <!-- Submit button for the form -->
+          <button type="submit">Add Bookmark</button>
+        </form>
+      </div>
+
+      <!-- Section for filtering bookmarks by category -->
+      <div class="filter-section">
+        <h2>Filter Bookmarks</h2>
+        <!-- Container for filter buttons -->
+        <div class="filter-buttons">
+          <button class="filter-btn active" data-category="All">All</button>
+          <button class="filter-btn" data-category="Work">Work</button>
+          <button class="filter-btn" data-category="Study">Study</button>
+          <button class="filter-btn" data-category="Entertainment">
+            Entertainment
+          </button>
+        </div>
+      </div>
+
+      <!-- Section where the list of bookmarks is displayed -->
+      <div class="bookmarks-container">
+        <h2>Your Bookmarks</h2>
+        <!-- Container where JavaScript will render the bookmark items -->
+        <div id="bookmarksList"></div>
+      </div>
+    </div>
+
+    <!-- Link to the JavaScript file -->
+    <script src="script.js"></script>
+  </body>
+</html>
